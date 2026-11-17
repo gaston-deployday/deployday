@@ -1,0 +1,12 @@
+{
+ "exA0": "r/e921bc95.jpg",
+ "exA1": "r/1fca7740.jpg",
+ "exA2": "r/2c2093d4.jpg",
+ "exA3": "r/0167824d.jpg",
+ "imgEquipo": "r/06f010fb.jpg",
+ "imgClientes": "r/6edefd22.jpg",
+ "imgCierre": "r/bb3ce1ea.png",
+ "geoLand": "r/f2745c4c.json",
+ "https://unpkg.com/react@18.3.1/umd/react.production.min.js": "r/3b8a3048.js",
+ "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "r/72d91b63.js"
+}
