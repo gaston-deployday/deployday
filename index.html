@@ -52,9 +52,9 @@
 <footer class="sx"><p>© 2026 Deployday. Todos los derechos reservados.</p><address><a href="mailto:administracion@deployday.com">administracion@deployday.com</a> · Buenos Aires, Argentina · Miami, Estados Unidos</address><p><a href="privacidad.html">Política de privacidad</a></p></footer>
 <script>
 /* Google Analytics 4: completar con el ID de medición (formato G-XXXXXXXXXX). Vacío = sin Analytics ni aviso de cookies. */
-window.DD_GA_ID = 'GTM-5CSD5D5J';
+window.DD_GA_ID = '';
 /* Formulario de contacto: URL del endpoint que envía el mail (por ejemplo, la función que usa Resend). Vacío = modo prueba. */
-window.DD_FORM_ENDPOINT = 'https://deployday-contacto.gaston-8a8.workers.dev/';
+window.DD_FORM_ENDPOINT = '';
 </script>
 <script>
 (async function(){
@@ -65,6 +65,10 @@ window.DD_FORM_ENDPOINT = 'https://deployday-contacto.gaston-8a8.workers.dev/';
     const m=t.match(/<head[^>]*>/i); if(m){const i=m.index+m[0].length;t=t.slice(0,i)+rs+t.slice(i);}
     const doc=new DOMParser().parseFromString(t,'text/html');
     document.documentElement.replaceWith(doc.documentElement);
+    var cv=document.createElement('div');cv.id='dd-cover';cv.setAttribute('aria-hidden','true');
+    cv.style.cssText='position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;background:#000004;color:#fff;font:700 64px/1 system-ui,sans-serif;transition:opacity .4s ease';
+    cv.innerHTML='d<span style="color:#04aeed">.</span>';document.documentElement.appendChild(cv);
+    setTimeout(function(){var c=document.getElementById('dd-cover');if(c)c.remove();},10000);
     for(const old of Array.from(document.scripts)){
       if(old.type==='application/ld+json') continue;
       const s=document.createElement('script');
